@@ -3,11 +3,16 @@ on:
 
 jobs:
   bisect:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: checkout mysql-server
+        uses: actions/checkout@v4
         with:
           repository: mysql/mysql-server
           path: mysql-server
+          ref: mysql-8.0.32
           fetch-depth: 0
+      - run: setup.ps1
+      - run: bisect.ps1

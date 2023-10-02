@@ -2,6 +2,13 @@ $RUNNER_TOOL_CACHE = $env:RUNNER_TOOL_CACHE
 $RUNNER_TEMP = $env:RUNNER_TEMP
 $PREFIX = Join-Path $RUNNER_TOOL_CACHE "mysql" $MYSQL_VERSION "x64"
 
+# NASM is required by OpenSSL
+Write-Host "::group::Set up NASM"
+choco install nasm
+Set-Item -Path "env:PATH" "C:\Program Files\NASM;$env:PATH"
+Write-Host "::endgroup::"
+
+# install OpenSSL
 $OPENSSL_VERSION = "3.1.3"
 Write-Host "::group::fetch OpenSSL source"
 Set-Location "$RUNNER_TEMP"

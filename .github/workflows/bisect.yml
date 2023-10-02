@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  bisect:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: mysql/mysql-server
+          path: mysql-server
+          fetch-depth: 0

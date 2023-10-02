@@ -14,5 +14,5 @@ jobs:
           path: mysql-server
           ref: mysql-8.0.32
           # fetch-depth: 0
-      - run: setup.ps1
-      - run: bisect.ps1
+      - run: .\setup.ps1
+      - run: .\bisect.ps1

@@ -13,6 +13,6 @@ jobs:
           repository: mysql/mysql-server
           path: mysql-server
           ref: mysql-8.0.32
-          fetch-depth: 0
+          # fetch-depth: 0
       - run: setup.ps1
       - run: bisect.ps1

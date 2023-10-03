@@ -8,11 +8,4 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - uses: mxschmitt/action-tmate@v3
-      - name: checkout mysql-server
-        uses: actions/checkout@v4
-        with:
-          repository: mysql/mysql-server
-          path: mysql-server
-          fetch-depth: 0
-      - run: .\setup.ps1
       - run: .\bisect.ps1

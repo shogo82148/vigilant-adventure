@@ -20,5 +20,5 @@ Write-Host "::endgroup::"
 
 $BUILD_SCRIPT = Join-Path $env:GITHUB_WORKSPACE "build.ps1"
 
-Join-Path $env:GITHUB_WORKSPACE mysql-server
+Set-Location Join-Path $env:GITHUB_WORKSPACE mysql-server
 $BUILD_SCRIPT

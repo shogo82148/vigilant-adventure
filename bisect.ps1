@@ -1,6 +1,6 @@
 $RUNNER_TOOL_CACHE = $env:RUNNER_TOOL_CACHE
 $RUNNER_TEMP = $env:RUNNER_TEMP
-$PREFIX = Join-Path $RUNNER_TOOL_CACHE "mysql" $MYSQL_VERSION "x64"
+$PREFIX = Join-Path $RUNNER_TOOL_CACHE "mysql" "8.0" "x64"
 
 Write-Host "::group::Set up Visual Studio 2022"
 New-Item $RUNNER_TEMP -ItemType Directory -Force

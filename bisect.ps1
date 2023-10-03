@@ -22,4 +22,4 @@ $MYSQL_SERVER = Join-Path $env:GITHUB_WORKSPACE mysql-server
 $BUILD_SCRIPT = Join-Path $env:GITHUB_WORKSPACE "build.ps1"
 
 Set-Location $MYSQL_SERVER
-$BUILD_SCRIPT
+.\build.ps1

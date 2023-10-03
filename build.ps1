@@ -1,6 +1,6 @@
 $RUNNER_TOOL_CACHE = $env:RUNNER_TOOL_CACHE
 $RUNNER_TEMP = "C:\Temp"
-$PREFIX = Join-Path $RUNNER_TOOL_CACHE "mysql" "mysql-8.0" "x64"
+$PREFIX = Join-Path $RUNNER_TOOL_CACHE "mysql"
 
 New-Item "boost" -ItemType Directory -Force
 $BOOST = Join-Path $RUNNER_TEMP "boost"

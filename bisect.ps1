@@ -22,4 +22,5 @@ $MYSQL_SERVER = Join-Path $env:GITHUB_WORKSPACE mysql-server
 $BUILD_SCRIPT = Join-Path $env:GITHUB_WORKSPACE "build.ps1"
 
 Set-Location $MYSQL_SERVER
-.\build.ps1
+git bisect start 8.0.33 8.0.34
+git bisect run powershell -File $BUILD_SCRIPT

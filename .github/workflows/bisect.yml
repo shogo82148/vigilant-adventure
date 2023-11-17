@@ -3,7 +3,7 @@ on:
 
 jobs:
   bisect:
-    runs-on: windows-2022
+    runs-on: windows-2019
     steps:
       - name: checkout
         uses: actions/checkout@v4

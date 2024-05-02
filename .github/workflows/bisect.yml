@@ -3,9 +3,8 @@ on:
 
 jobs:
   bisect:
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
       - name: checkout
         uses: actions/checkout@v4
       - uses: mxschmitt/action-tmate@v3
-      - run: .\bisect.ps1
